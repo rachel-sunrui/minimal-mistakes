@@ -19,7 +19,7 @@ tags:
 
 ### Math equations
  
-![DCT](https://github.com/rachel-sunrui/rachel-sunrui.github.io/images/dct.png)
+![dct]({{site.url}}{{site.baseurl}}/assets/images/dct.JPG)
 
 
 

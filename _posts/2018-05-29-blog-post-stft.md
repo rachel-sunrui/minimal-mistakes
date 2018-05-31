@@ -10,7 +10,7 @@ tags:
 
 * Why use STFT? We wants to know the frequency components at each time point.
 * Solution: we perform FFT on small blocks. 
-$$X(t,\omega) = \int_{-\infty}^{\infty}[x(t\prime)w(t\prime - t)]e^{-j\omega t\prime }dt\prime $$
+$$X(t,\omega) = \int_{-\infty}^{\infty}[x(t^{\prime})w(t^{\prime} - t)]e^{-j\omega t^{\prime} }dt^{\prime} $$
 where $w(t)$ is the window function.
 * Window fuction will leak low frequency component to high frequency part. This leads to time-frequency uncertainty.
 
