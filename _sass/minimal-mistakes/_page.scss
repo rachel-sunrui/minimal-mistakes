@@ -500,21 +500,21 @@
 .wide {
   .page {
     @include breakpoint($large) {
-      padding-right: 0;
+      padding-right: #{$right-space};
     }
 
     @include breakpoint($x-large) {
-      padding-right: 0;
+      padding-right: #{$right-space};
     }
   }
 
   .page__related {
     @include breakpoint($large) {
-      padding-right: 0;
+      padding-right: #{$right-space};
     }
 
     @include breakpoint($x-large) {
-      padding-right: 0;
+      padding-right: #{$right-space};
     }
   }
 }
