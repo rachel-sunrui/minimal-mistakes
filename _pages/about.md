@@ -1,4 +1,5 @@
 ---
+layout: single
 permalink: /
 title: "Rui Sun's homepage"
 excerpt: "About me"
