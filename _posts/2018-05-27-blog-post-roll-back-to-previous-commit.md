@@ -6,9 +6,6 @@ tags:
   - Git
 ---
 
-The font size of the code is really small, please go to the [markdown file](
-https://github.com/rachel-sunrui/rachel-sunrui.github.io/blob/master/_posts/2018-05-27-blog-post-roll-back-to-previous-commit.md):
-
 **Taken from <https://gist.github.com/StefanoMagrassi/6c78b6f48599377a5c805fd58a5cd93d>**
 
 Creat a branch using previous commit:
