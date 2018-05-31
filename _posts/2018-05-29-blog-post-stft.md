@@ -26,4 +26,4 @@ where $\sigma_t^2 = \frac{1}{E_t}\int t^2|w(t)|^2 dt$,$\sigma_{\omega}^2 = \frac
 * This leads to wavelet transform where different windows with different time/frequency resolution are used.
 
 See this [image](http://slideplayer.com/slide/10405197/):
-![tf](https://github.com/rachel-sunrui/rachel-sunrui.github.io/_posts/images/tf_tiling.PNG)
+![tf](https://github.com/rachel-sunrui/rachel-sunrui.github.io/images/tf_tiling.PNG)
