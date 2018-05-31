@@ -68,7 +68,7 @@
         {% elsif post.collection == 'publications' %}
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.date %}
-          <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>
+          <p class="page__meta"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>
         {% endif %}
 
     {% if post.excerpt and site.read_more != 'enabled' %}
