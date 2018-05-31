@@ -1,7 +1,8 @@
 ---
 layout: single
-title: "Rui Sun's homepage"
+title: "Something about me"
 author_profile: true
+
 ---
 
 Hi, I am Rui (Rachel) Sun, a Ph.D. student in the Biomedical deparment in Carnegie Mellon University. I am working on using signal processing, machine learning and neuroscience to solve clinical problems in [Dr.He](https://www.cmu.edu/bme/helab/)'s lab. 
