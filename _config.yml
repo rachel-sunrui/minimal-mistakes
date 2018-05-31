@@ -102,9 +102,7 @@ analytics:
 author:
   name             : "Rui Sun"
   avatar           : "profile.jpg"
-  bio              : "Ph.D. student \n
-  Biomedical Engineering \n
-  Carnegie Mellon University"
+  bio              : "Ph.D. student<br>Biomedical Engineering<br>Carnegie Mellon University"
   location         : # "Pittsburgh"
   email            :
   uri              :
