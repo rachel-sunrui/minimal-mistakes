@@ -19,7 +19,7 @@ tags:
 
 ### Math equations
  
-![dct]({{site.url}}{{site.baseurl}}/assets/images/dct.JPG)
+![dct]({{site.url}}{{site.baseurl}}/assets/images/dct.png)
 
 
 
