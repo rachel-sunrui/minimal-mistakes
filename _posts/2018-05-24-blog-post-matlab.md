@@ -2,7 +2,6 @@
 title: 'Using Matlab in Jupyter Notebook'
 <!-- date: 2018-05-24 -->
 permalink: /posts/2018/05/Matlab_Jupyter/
-excerpt: Matlab in Jupyter
 tags:
   - Matlab
   - Jupyter Notebook
