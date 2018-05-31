@@ -264,11 +264,11 @@ defaults:
       type: posts
     values:
       layout: single
-      classes: wide
+      # classes: wide
       author_profile: true
       read_time: false
-      comments: # true
-      share: true
+      comments: true
+      share: # true
       related: true
 
   # _pages
@@ -277,5 +277,5 @@ defaults:
       type: pages
     values:
       layout: single
-      classes: wide
+      # classes: wide
       author_profile: true
