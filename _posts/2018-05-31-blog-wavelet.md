@@ -26,7 +26,7 @@ $$\phi_m$$ is the mother wavelet.
 ### Filter banks  (Multi-resolution analysis)
 * Low pass filters are averaging filters that approximate the signal and high pass filter produces details.
 * Thresholding can denoise the signal and there are multiple [ways](http://www.gtwavelet.bme.gatech.edu/wp/kidsA.pdf) to choose the threshold. 
-* ![1 stage filter bandk]({{site.url}}{{site.baseurl}}/assets/images/filterband.jpg)
+* ![1 stage filter bank]({{site.url}}{{site.baseurl}}/assets/images/filterbank.jpg)
 * Because of the filtering, downsampling will not overlap the frequency bands.
 * When the length of the filter is larger than 2, boundary problems occur. (There are no boundary problems with
 the Haar wavelet!) There are two main ways to handle the boundaries: symmetric and period.(From [Wavelet for kids](http://www.gtwavelet.bme.gatech.edu/wp/kidsA.pdf).)
