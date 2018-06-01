@@ -5,7 +5,7 @@ permalink: /posts/2018/05/wavelet/
 tags:
   - domain transform
   - wavelet
- categories:
+categories:
   - signal processing
 ---
 
