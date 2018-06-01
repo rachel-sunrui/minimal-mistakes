@@ -3,9 +3,10 @@ title: 'Discrete consine transform(DCT-II)'
 date: 2018-05-30
 permalink: /posts/2018/05/DCT/
 tags:
-  - signal processing
   - domain transform
   - DCT
+categories:
+  - Signal processing
 ---
 
 ### Why use DCT

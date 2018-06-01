@@ -6,7 +6,7 @@ tags:
   - domain transform
   - wavelet
 categories:
-  - signal processing
+  - Signal processing
 ---
 
 * We know that wavelet transform comes from STFT by changing a single windowing function to a set of windowing functions.

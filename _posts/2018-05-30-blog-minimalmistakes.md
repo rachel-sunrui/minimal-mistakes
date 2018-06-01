@@ -4,6 +4,9 @@ date: 2018-05-31
 permalink: /posts/2018/05/minimalmistakes/
 tags:
   - Webpage
+categories:
+  - Tools
+  - Coding
 ---
 
 I wrote some notes on how to customize your website. 

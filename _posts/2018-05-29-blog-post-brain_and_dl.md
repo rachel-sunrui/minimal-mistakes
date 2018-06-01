@@ -4,7 +4,10 @@ date: 2018-05-26
 permalink: /posts/2018/05/brainvsdl/
 tags:
   - deep learning
-  - neuroscience
+  - neuro-physiology
+categories:
+  - Neuroscience
+  - Machine learning
 ---
 
 **Original post: <http://timdettmers.com/2015/07/27/brain-vs-deep-learning-singularity/>**

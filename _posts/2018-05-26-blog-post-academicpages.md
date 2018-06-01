@@ -4,6 +4,9 @@ date: 2018-05-26
 permalink: /posts/2018/05/academicpages/
 tags:
   - Webpage
+categories:
+  - Tools
+  - Coding
 ---
 
 

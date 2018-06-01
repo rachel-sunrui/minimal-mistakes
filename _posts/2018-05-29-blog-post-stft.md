@@ -3,9 +3,10 @@ title: 'Short Time Fourier Transform'
 date: 2018-05-30
 permalink: /posts/2018/05/STFT/
 tags:
-  - signal processing
   - domain transform
   - STFT
+categories:
+  - Signal processing
 ---
 
 * Why use STFT? We wants to know the frequency components at each time point.

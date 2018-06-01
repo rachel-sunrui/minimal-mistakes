@@ -1,2 +1,2 @@
-* Add publication and CV page(learn how to upload pdf files)
+* Add publication 
 * http://lantaoyu.com

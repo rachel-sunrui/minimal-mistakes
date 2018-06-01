@@ -4,6 +4,8 @@ date: 2018-05-27
 permalink: /posts/2018/05/rollbackgit/
 tags:
   - Git
+categories:
+  - Coding
 ---
 
 **Taken from <https://gist.github.com/StefanoMagrassi/6c78b6f48599377a5c805fd58a5cd93d>**
