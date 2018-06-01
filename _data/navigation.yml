@@ -23,7 +23,7 @@ main:
   #   url: /portfolio/
  
   - title: "CV"
-    url: /cv/
+    url: /assets/Resume_afterPhD.pdf
 
   - title: "Blog Posts"
     url: /year-archive/

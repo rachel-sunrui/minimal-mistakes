@@ -3,9 +3,10 @@ title: 'Wavelet Transform'
 date: 2018-05-31
 permalink: /posts/2018/05/wavelet/
 tags:
-  - signal processing
   - domain transform
   - wavelet
+ categories:
+  - signal processing
 ---
 
 * We know that wavelet transform comes from STFT by changing a single windowing function to a set of windowing functions.
