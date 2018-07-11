@@ -4,6 +4,9 @@ date: 2018-06-26
 permalink: /posts/2018/06/basicml/
 tags:
   - naive bayes
+  - regression
+  - perceptron
+  - SVM
 categories:
   - Machine Learning
 ---
@@ -15,15 +18,15 @@ categories:
 
 ### Logistic regression
 * During the inference, instead of using the sign function in Navie Bayes, use logistic function to make the obj function differentiable.
-* Discriminative classifier: model $$p(y | X)$$, maximize it.
+* Discriminative classifier: model $$p(y|X)$$, maximize it.
 * No closed form solution
 
 ### Linear regression
 * Minimize LSE
 * Close form: $$\theta = (X^TX)^{-1}X^Ty$$
-$$\hat{y} = X \theta$$
+	$$\hat{y} = X \theta$$
 * Geometric interpretation: $$\hat{y}$$ is the orthogonal projection of $$y$$ into the space spanned by the columns of $$X$$.
-* Probabilistic interpretation:LMS == MLE of $$theta$$ with Gaussian noise assumption.
+* Probabilistic interpretation: LMS is MLE of $$theta$$ with Gaussian noise assumption.
 
 ### Perceptron
 * Online learning model
@@ -38,12 +41,23 @@ $$\hat{y} = X \theta$$
 * Function $$K$$ map the inner product to higher dimension.
 * K is a kernel iff 
 	* K is symmetric
-	* Matrix $$K = (K(x_i,x_j)){i,j=1,\dots,n}$$ is PSD.
+	* Matrix $$K = (K(x_i,x_j))_{i,j=1,\dots,n}$$ is PSD.
 * If K1,K2 are kernels, 
 	* c1,c2 positive number, c1K1 + c2K2 is also a kernel
 	* K1K2 is also a kernel.
 
 
 ### SVM
-* Directly search for large margin classifier
-* 
+* Inspired by perceptron, directly search for large margin classifier
+* Standard quadratic programming problem
+* Hinge loss: $$l(w,x,y) = \max (0, 1 - y*w*x)$$
+
+### Learning theory
+* The number of training samples $$m$$ needed is depended on the complexity of H 
+	* H is the size of the hypothesis space
+	* If H is the class of conjunctions over $$X = {0,1}^n$$. Then $$|H| = 3^n$$ (Every point:0,1,none)
+	* If H is infinite, use VC-dimension
+	* VCdim of linear separators in $$R^d$$ is $$d+1$$ 
+* $$m \propto \frac{1}{2 \eta^2 }[ln(|H| + ln(2/ \delta))]$$ $$\eta$$ error, $$1 - \delta$$ probability of having a small error
+* True error and overfitting
+![srm]({{site.url}}{{site.baseurl}}/assets/images/srm.JPEG)
