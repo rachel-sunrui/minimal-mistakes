@@ -39,7 +39,7 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
+<!--     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
           {% if teaser contains "://" %}
@@ -49,7 +49,7 @@
           {% endif %}
           alt="">
       </div>
-    {% endif %}
+    {% endif %} -->
 
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
@@ -60,7 +60,7 @@
     </h2>
     
     {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+      <p class="page__meta"><i class="far fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
         {% if post.collection == 'teaching' %}
