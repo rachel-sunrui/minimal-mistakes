@@ -16,3 +16,6 @@ I wrote some notes on how to customize your website.
 	3. Change the wide option in `_pages.scss`,`_archive.scss` from 0 to `$right-space`.
 	4. Add values in `classes: wide` in `_config.yml` to use the wide option.
 
+* Change the preview style of the posts:
+    In `_includes`, find `excerpt` and change accordingly in `archive-single.html`.
+
