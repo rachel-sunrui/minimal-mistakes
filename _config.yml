@@ -279,3 +279,15 @@ defaults:
       layout: single
       classes: wide
       author_profile: true
+
+  - scope:
+      path: ""
+      type: testf
+    values:
+      layout: single
+      classes: wide
+      author_profile: true
+      read_time: true
+      comments: true
+      share: # true
+      related: false
