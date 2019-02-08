@@ -1,7 +1,7 @@
 ---
-title: 'Papers I '
-date: 2019-1-16
-permalink: /posts/2019/1/ESI/
+title: 'Papers I browsed'
+date: 2019-02-08
+permalink: /posts/2019/2/papers/
 tags:
   - source imaging
 categories:
