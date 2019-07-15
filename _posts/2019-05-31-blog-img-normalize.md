@@ -1,3 +1,4 @@
+---
 title: 'Image data preprocessing for neural networks'
 date: 2019-05-31
 permalink: /posts/2019/5/preprocesssing/
