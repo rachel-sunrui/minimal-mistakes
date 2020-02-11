@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: 'Studies notes regarding generalization in Deep learning'
 date: 2020-02-10
 permalink: /posts/2020/02/generalization/
@@ -6,7 +6,7 @@ tags:
   - neural networks
 categories:
   - Machine Learning
---- -->
+---
 
 ## Introduction
 Probably approximately correct (PAC) learning (Valient, 1984) provided a theoretical framework to provide a *uniform convergence bound* on the generalization error (the difference between training error, denoted as $$\hat{e}(h)$$, and the true error, denoted as $$e(h)$$, for the whole data population, test error is used to approximate this error) for a machine learning model given the model complexity ($$|H|$$) and the sample complexity (The number of trainingd data, N). 
@@ -18,7 +18,7 @@ $$P(|e(h) - \hat{e}(h)| \leq \epsilon) \geq 1 - \delta$$
 By untilizing the Hoeffding bounds, we can find for finite hypothesis agnostic case (the hypothesis space may not contain the true hypothesis, that is the modeling function we choose cannot model the real relationship)
 
 $$P(e(h) > \hat{e}(h) + \epsilon) \leq |H|e^{-2N\epsilon^2} \leq \delta$$
-$$N \geq \frac{1}{2 \epsilon^2}(\ln{|H| + \ln(1/ \delta)})$$
+$$N \geq \frac{1}{2 \epsilon^2}(\ln{(|H|)} + \ln{(1/ \delta)})$$
 
 and for infinite hypothesis agnostic case, 
 $$N = O(\frac{1}{\epsilon^2}[VC(|H|)+\ln(1/ \delta)])$$
