@@ -20,6 +20,7 @@ $$P(|e(h) - \hat{e}(h)| \leq \epsilon) \geq 1 - \delta$$
 By untilizing the Hoeffding bounds, we can find for finite hypothesis agnostic case (the hypothesis space may not contain the true hypothesis, that is the modeling function we choose cannot model the real relationship)
 
 $$P(e(h) < \hat{e}(h) + \epsilon) \leq \|H\|e^{-2N \epsilon^2}) \leq \delta$$
+
 $$N \geq \frac{1}{2 \epsilon^2}(ln(\|H\|) + \ln{(1/ \delta)})$$
 
 and for infinite hypothesis agnostic case, 
@@ -45,10 +46,17 @@ It has been shown that when the expectation is calculated over all possible data
 $$e(N) \sim \alpha N^\beta$$
 
 
-with $$\beta=-0.5,-1,-2$$. This power-law rule was observed in some empirical studies. However, it could not explain many choices of $$\beta$$ in real applications.(Hestness et al, 2017)
+with $$\beta=-0.5,-1,-2$$. This power-law rule was observed in some empirical studies. However, it could not explain many choices of $$\beta$$ in real applications.(Hestness et al, 2017) (*The writer thinks this is because the theoritical bound is calculated given all possible distribution, but the experiments are conducted on different datasets one by one*)
 
 
-
+## Experiments: relationship between loss and the number of training data
+Hestness et al did experiments on several popular deep learning tasks (word-based language model, character-based language model, image processing and speech recognition.) and found that:
+* Power-law generalization error scaling is observed across a breadth of factors (tasks, model size, model type, and optimizer).
+* Similar power-law exponents $$\beta$$ for the same task.
+* Model improvements only shift the error but do not appear to affect the power-law exponent.
+* However, the result is yet to be explained by theoretical work. 
+* They also show that model size scales sublinearly with data size.(See figure b for all figures in their paper)
+![Results from the paper]({{site.url}}{{site.baseurl}}/assets/images/data_vs_loss.png)
 
 
 
