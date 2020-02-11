@@ -1,5 +1,5 @@
 ---
-title: 'Studies notes regarding generalization in Deep learning'
+title: 'Theoritical and Empirical studies on generalization in Deep learning'
 date: 2020-02-10
 permalink: /posts/2020/02/generalization/
 tags:
@@ -8,7 +8,9 @@ categories:
   - Machine Learning
 ---
 
-## Introduction
+
+## Theory: Bound the generalization error
+### Introduction
 Probably approximately correct (PAC) learning (Valient, 1984) provided a theoretical framework to provide a *uniform convergence bound* on the generalization error (the difference between training error, denoted as $$\hat{e}(h)$$, and the true error, denoted as $$e(h)$$, for the whole data population, test error is used to approximate this error) for a machine learning model given the model complexity ($$|H|$$) and the sample complexity (The number of trainingd data, N). 
 
 The PAC criterion is that the model has low generalization error $$\epsilon$$ with high probability $$\delta$$:
@@ -17,11 +19,11 @@ $$P(|e(h) - \hat{e}(h)| \leq \epsilon) \geq 1 - \delta$$
 
 By untilizing the Hoeffding bounds, we can find for finite hypothesis agnostic case (the hypothesis space may not contain the true hypothesis, that is the modeling function we choose cannot model the real relationship)
 
-$$P(e(h) > \hat{e}(h) + \epsilon) \leq (|H|e^{-2N\epsilon^2}) \leq \delta$$
+$$P(e(h) \le \hat{e}(h) + \epsilon) \leq (|H|e^{-2N\epsilon^2}) \leq \delta$$
 $$N \geq \frac{1}{2 \epsilon^2}(ln(|H|) + \ln{(1/ \delta)})$$
 
-and for [infinite hypothesis agnostic](https://www.cs.cmu.edu/~mgormley/courses/10601-s17/slides/lecture28-pac.pdf) case, 
-$$N = O(\frac{1}{\epsilon^2}[VC(|H|)+\ln(1/ \delta)])$$
+and for infinite hypothesis agnostic case, 
+$$N = O(\frac{1}{\epsilon^2}[VC(|H|)+\ln(1/ \delta)])$$ [ref](https://www.cs.cmu.edu/~mgormley/courses/10601-s17/slides/lecture28-pac.pdf)
 
 Basically, the generalization error could be written as 
 
@@ -29,17 +31,21 @@ $$e(h) \leq \hat{e}(h) + O(\frac{some \ function\  of \ the \ model\  complexity
 
 This theory has been used to estimate the number of training data needed for machine learning algorithm
 
-## Number of training data needed for deep learning: Theoritical analysis
+### Applied to deep learning
 Earlier studies (Mitchell, 1997) used PAC to estimate the number of iid samples needed for a feedforward neural network given a desired generalization error. A recent study (Du & Wang et al, 2019) gives a tigher bound for fully connected neural network, convolutional network and recurrent network with one-hidden layer using input/hidden feature size (and input sequence length for RNN).
 
-However, this approach would fail for many modern deep learning network structures because the networks are overparameterized. The *Lottery Ticket Hypothesis* (Frankle & Carbin, 2018) suggests that there exists a subnetwork can perform equally well as the large network if we can properly choose the intialization weight (In this case, they need to use the same initialization value used in the full network to train the subnetwork). In other words, to really understand the generalization of deep learning models, we cannot simply use some function of the number of parameters in the network to represent the model complexity, and apply PAC, instead, 
+However, this approach would fail for many modern deep learning network structures because the networks are overparameterized. The *Lottery Ticket Hypothesis* (Frankle & Carbin, 2018) suggests that there exists a subnetwork can perform equally well as the large network if we can properly choose the intialization weight (In this case, they need to use the same initialization value used in the full network to train the subnetwork). In other words, to really understand the generalization of deep learning models, we cannot simply use some function of the number of parameters in the network to represent the model complexity, and apply PAC, instead, we need to think about how the optimization methods (SGD and its varients) and the underlying data distribution restrict the deep networks to "simpler" models. (think about the subnetwork.)
+
+Many methods has been proposed for a refined version of the uniform convergence bound for deep learning. (That is, *some function of the model complexity* in the nominator changes to a more elaborte function that may also consider data distribution, training optimizer, etc). Despite all the efforts, recently, [Nagarajan & Kolter](https://locuslab.github.io/2019-07-09-uniform-convergence/) showed that uniform convergence bound may not be able to fully explain the generalization in deep learning and we need to think of other ways to derive the generalization bounds for deep networks.
 
 
-`the proposal was to “search for the inductive bias” of SGD in deep learning: can we identify how the underlying data distribution and the algorithm in conjuction restrict the deep network to a “simple” class of functions?`
+## Theory: Estimate the expected generalization error
+It has been shown that when the expectation is calculated over all possible data distributions, as sample complexity increases, generalization error will decline following a power-law
 
--- [Nagarajan & Kolter, 2019](https://locuslab.github.io/2019-07-09-uniform-convergence/)
+$$e(N) \sim \alpha N^\beta$$
 
 
+with $$\beta=-0.5,-1,-2$$.
 
 
 
