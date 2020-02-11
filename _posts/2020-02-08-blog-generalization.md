@@ -19,8 +19,8 @@ $$P(|e(h) - \hat{e}(h)| \leq \epsilon) \geq 1 - \delta$$
 
 By untilizing the Hoeffding bounds, we can find for finite hypothesis agnostic case (the hypothesis space may not contain the true hypothesis, that is the modeling function we choose cannot model the real relationship)
 
-$$P(e(h) \le \hat{e}(h) + \epsilon) \leq (|H|e^{-2N\epsilon^2}) \leq \delta$$
-$$N \geq \frac{1}{2 \epsilon^2}(ln(|H|) + \ln{(1/ \delta)})$$
+$$P(e(h) < \hat{e}(h) + \epsilon) \leq \|H\|e^{-2N \epsilon^2}) \leq \delta$$
+$$N \geq \frac{1}{2 \epsilon^2}(ln(\|H\|) + \ln{(1/ \delta)})$$
 
 and for infinite hypothesis agnostic case, 
 $$N = O(\frac{1}{\epsilon^2}[VC(|H|)+\ln(1/ \delta)])$$ [ref](https://www.cs.cmu.edu/~mgormley/courses/10601-s17/slides/lecture28-pac.pdf)
@@ -45,7 +45,10 @@ It has been shown that when the expectation is calculated over all possible data
 $$e(N) \sim \alpha N^\beta$$
 
 
-with $$\beta=-0.5,-1,-2$$.
+with $$\beta=-0.5,-1,-2$$. This power-law rule was observed in some empirical studies. However, it could not explain many choices of $$\beta$$ in real applications.(Hestness et al, 2017)
+
+
+
 
 
 
@@ -61,6 +64,8 @@ Frankle, J., & Carbin, M. (2018). The lottery ticket hypothesis: Finding sparse,
 
 
 Nagarajan, V., & Kolter, J. Z. (2019). Uniform convergence may be unable to explain generalization in deep learning. In Advances in Neural Information Processing Systems (pp. 11611-11622).
+
+Hestness, J., Narang, S., Ardalani, N., Diamos, G., Jun, H., Kianinejad, H., ... & Zhou, Y. (2017). Deep learning scaling is predictable, empirically. arXiv preprint arXiv:1712.00409.
 
 
 
