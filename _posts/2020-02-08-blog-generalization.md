@@ -17,7 +17,7 @@ $$P(|e(h) - \hat{e}(h)| \leq \epsilon) \geq 1 - \delta$$
 
 By untilizing the Hoeffding bounds, we can find for finite hypothesis agnostic case (the hypothesis space may not contain the true hypothesis, that is the modeling function we choose cannot model the real relationship)
 
-$$P(e(h) > \hat{e}(h) + \epsilon) \leq |H|e^{-2N\epsilon^2} \leq \delta$$
+$$P(e(h) > \hat{e}(h) + \epsilon) \leq {|H|e^{-2N\epsilon^2}} \leq \delta$$
 $$N \geq \frac{1}{2 \epsilon^2}(\ln{(|H|)} + \ln{(1/ \delta)})$$
 
 and for infinite hypothesis agnostic case, 
@@ -37,7 +37,7 @@ However, this approach would fail for many modern deep learning network structur
 
 `the proposal was to “search for the inductive bias” of SGD in deep learning: can we identify how the underlying data distribution and the algorithm in conjuction restrict the deep network to a “simple” class of functions?`
 
--- [https://locuslab.github.io/2019-07-09-uniform-convergence/] (Nagarajan & Kolter, 2019)
+-- [Nagarajan & Kolter, 2019](https://locuslab.github.io/2019-07-09-uniform-convergence/)
 
 
 
