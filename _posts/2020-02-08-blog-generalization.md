@@ -50,13 +50,19 @@ with $$\beta=-0.5,-1,-2$$. This power-law rule was observed in some empirical st
 
 
 ## Experiments: relationship between loss and the number of training data
-Hestness et al did experiments on several popular deep learning tasks (word-based language model, character-based language model, image processing and speech recognition.) and found that:
+In practice, one could plot the learning curve (number of training data vs. training and validation loss) to see if the model has enough training data. If the differences are huge (it is overfitting), add more data or add regularization.
+
+To provide a more general guideline for the number of training data needed for deep learning, Hestness et al did experiments on several popular deep learning tasks (word-based language model, character-based language model, image processing and speech recognition.) and found that:
 * Power-law generalization error scaling is observed across a breadth of factors (tasks, model size, model type, and optimizer).
 * Similar power-law exponents $$\beta$$ for the same task.
 * Model improvements only shift the error but do not appear to affect the power-law exponent.
 * However, the result is yet to be explained by theoretical work. 
 * They also show that model size scales sublinearly with data size.(See figure b for all figures in their paper)
 ![Results from the paper]({{site.url}}{{site.baseurl}}/assets/images/data_vs_loss.png)
+* So they suggest to search the model structures with a small training data (as long as it is in the power-law zone), and do a finer parameter sweep with large dataset to save time.
+
+## Conclusion
+There are still no concrete conclusion on the number of parameters needed for a network. New theoritical tools need to be invented. However, there are several empirical guidelines we can refer.
 
 
 
