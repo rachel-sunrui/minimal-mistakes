@@ -17,14 +17,14 @@ $$P(|e(h) - \hat{e}(h)| \leq \epsilon) \geq 1 - \delta$$
 
 By untilizing the Hoeffding bounds, we can find for finite hypothesis agnostic case (the hypothesis space may not contain the true hypothesis, that is the modeling function we choose cannot model the real relationship)
 
-$$P(e(h) > \hat{e}(h) + \epsilon) \leq {|H|e^{-2N\epsilon^2}} \leq \delta$$
-$$N \geq \frac{1}{2 \epsilon^2}(\ln{(|H|)} + \ln{(1/ \delta)})$$
+$$P(e(h) > \hat{e}(h) + \epsilon) \leq (|H|e^{-2N\epsilon^2}) \leq \delta$$
+$$N \geq \frac{1}{2 \epsilon^2}(ln(|H|) + \ln{(1/ \delta)})$$
 
-and for infinite hypothesis agnostic case, 
+and for [infinite hypothesis agnostic](https://www.cs.cmu.edu/~mgormley/courses/10601-s17/slides/lecture28-pac.pdf) case, 
 $$N = O(\frac{1}{\epsilon^2}[VC(|H|)+\ln(1/ \delta)])$$
-(From: cmu10601-s17-pac-learning)
 
 Basically, the generalization error could be written as 
+
 $$e(h) \leq \hat{e}(h) + O(\frac{some \ function\  of \ the \ model\  complexity}{\sqrt{N}})$$
 
 This theory has been used to estimate the number of training data needed for machine learning algorithm
@@ -40,8 +40,6 @@ However, this approach would fail for many modern deep learning network structur
 -- [Nagarajan & Kolter, 2019](https://locuslab.github.io/2019-07-09-uniform-convergence/)
 
 
-
-Specifically,  Mathematically, can we find weight norms that are implicitly regularized during training on real data? Then, we could apply uniform convergence on a correspondingly simpler, norm-bounded class of functions, which would then hopefully yield better bounds. Roughly, these bounds would be of the form:
 
 
 
